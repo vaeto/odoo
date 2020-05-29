@@ -1,0 +1,1370 @@
+
+
+<head>
+  <style type="text/css">
+footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 0rem !important;
+}
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+  #a, #b
+{
+    display:inline;
+}
+    .slick-slide img {
+      width: 350px;
+      height: 350px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 50%;
+      
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+  </style>
+
+<style>
+.sel-select{width: 100%}
+/* This is to remove the arrow of select element in IE */
+select::-ms-expand {  display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+  .ui-select{border: 1px solid #CCC; border-radius: 4px; box-sizing: border-box; position: relative; overflow: hidden;}
+  .ui-select select { width: 110%; background-position: right 30px center !important; border: none !important;}
+}
+
+.a {
+    box-shadow: 15px 15px 10px -4px rgba(31, 73, 125, 0.8);
+   
+    margin: 50px;
+    background: white;
+}
+.shadow {
+    box-shadow: 1rem 1.5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+a{
+
+color:black !important;
+font-size: 14px;
+}
+
+
+.test{
+overflow-y: hidden;
+    padding: 0 10px 10px 10px;
+    margin: 0 -10px
+}
+</style>
+
+<style>
+ul {
+  list-style-type: none;
+}
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;               
+  background-color:#5A6268;
+  height: 2px;
+}
+
+.slick-slide img {
+  
+}
+
+
+.slick-prev:before, .slick-next:before { font-family: FontAwesome; font-size: 18px; line-height: 1; font-weight: 2px; color: grey; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+
+.slick-prev:before { content: "\f053"; }
+[dir="rtl"] .slick-prev:before { content: "\f054"; }
+
+[dir="rtl"] .slick-next { left: -10px; top: 70px; right: auto; }
+.slick-next:before { content: "\f054"; }
+[dir="rtl"] .slick-next:before { content: "\f053"; }
+.slick-dots {
+    top: 100%;
+    list-style-type: none;
+
+}
+.slick-dots {
+    top: 100%;
+    list-style-type: none;
+
+}
+.slick-dots li{
+    margin: 1 0.25rem;
+width:3px !important;
+ 
+}
+
+.slick-dots li button {
+    display: inline;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 1px;
+
+   margin: 12px 0 3px 0;
+    border: none;
+    border-radius: 100%;
+    background-color: white !important;
+    border: 1px solid #696969 !important;
+
+    text-indent: -9999px;
+}
+.slick-dots li button:hover{
+    background-color: black !important;
+}
+.slick-dots li.slick-active button{
+    border: 1px solid #000000 !important;
+    background-color: #000000 !important;
+}
+</style>
+
+<style type="text/css">
+.modal-header {
+    border-bottom: 0 none;
+}
+
+.modal-footer {
+    border-top: 0 none;
+}
+.lh{
+
+  line-height: 2.5rem;
+}
+.rh{
+
+  line-height: 6rem;
+}
+
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+}
+  
+  [type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    line-height: 2.5;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+   
+}
+
+.ab [type="radio"]:checked + label:before,
+.ab [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+
+   
+}
+
+.ab [type="radio"]:checked + label,
+.ab [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 100px;
+    cursor: pointer;
+   
+    display: inline-block;
+    color: #666;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 24px;
+    height: 24px;
+ 
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+     box-shadow: 0 0 0 3px #5C4033;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+.ab [type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 64px;
+    height: 64px;
+ 
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+     box-shadow: 0 0 0 3px #5C4033;
+}
+.ab [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.ab [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+
+
+
+
+.a:checked + label:before,
+  .a:not(:checked) + label:before {
+  background:#C9CFE0;  
+  }
+
+  .b:checked + label:before,
+  .b:not(:checked) + label:before {
+  background:#25354D;  
+  }
+
+  .c:checked + label:before,
+  .c:not(:checked) + label:before {
+  background:#AEA9AC;  
+  }
+  
+  .d:checked + label:before,
+  .d:not(:checked) + label:before {
+  background:#5B3E35;  
+  }
+
+  .e:checked + label:before,
+  .e:not(:checked) + label:before {
+  background:#392A24;  
+  }
+
+  .f:checked + label:before,
+  .f:not(:checked) + label:before {
+  background:#DED5CB;  
+  }
+
+
+
+
+  .g:checked + label:before,
+  .g:not(:checked) + label:before {
+  background:#2A1F1C;  
+  }
+
+  .h:checked + label:before,
+  .h:not(:checked) + label:before {
+  background:#2B2525;  
+  }
+
+  .i:checked + label:before,
+  .i:not(:checked) + label:before {
+  background:#5E6065;  
+  }
+  
+  .j:checked + label:before,
+  .j:not(:checked) + label:before {
+  background:#4B4637;  
+  }
+
+  .k:checked + label:before,
+  .k:not(:checked) + label:before {
+  background:#927B52;  
+  }
+
+  .l:checked + label:before,
+  .l:not(:checked) + label:before {
+  background:#67644A;  
+  }
+
+
+
+  .m:checked + label:before,
+  .m:not(:checked) + label:before {
+  background:#7D6B32;  
+  }
+
+  .n:checked + label:before,
+  .n:not(:checked) + label:before {
+  background:#44462E;  
+  }
+
+  .o:checked + label:before,
+  .o:not(:checked) + label:before {
+  background:#3A2F21;  
+  }
+  
+  .p:checked + label:before,
+  .p:not(:checked) + label:before {
+  background:#44462E;  
+  }
+
+  .q:checked + label:before,
+  .q:not(:checked) + label:before {
+  background:#615739;  
+  }
+
+  .r:checked + label:before,
+  .r:not(:checked) + label:before {
+  background:#554F27;  
+  }
+
+  .s:checked + label:before,
+  .s:not(:checked) + label:before {
+  background:#9193A0;  
+  }
+
+  .t:checked + label:before,
+  .t:not(:checked) + label:before {
+  background:#958160;  
+  }
+
+  .u:checked + label:before,
+  .u:not(:checked) + label:before {
+  background:#453E31;  
+  }
+ 
+
+
+
+
+</style>
+</head>
+
+<body onload="onLoad({{style_id}},{{fabric_id}},{{add_color_id}},{{add_more_id}})">
+
+
+<section class="  ">
+{{!-- <form  action="fabric.php" method="get"> --}}
+    <div class="container-fluid" align="center">
+
+
+
+<div class="row " id="img_style_push_scroll">
+
+
+  {{!-- <div class="col-md-7 position-fixed" id="img_style_push"  > --}}
+      
+<div class="col-md-7" style="position: fixed !important;">
+      <div  id="img_style_push"   >
+
+
+  </div>
+  <div class=" text-center" id="add_to_cart">
+
+  <a  type="button" onclick="add_to_cart()" style="background-color:white;" class="btn btn-secondary">ADD TO CART</a>
+  </div> 
+</div>
+
+  <div class="col-md-3 offset-md-7 ">
+
+
+  <div class="text-left form-group row">
+   <label for="sel-options" class="col-md-7" style="font-size:12px; color:grey;" >
+  CHOOSE YOUR STYLE</label>
+  
+ 
+    
+      <select id="change_style"  class="form-control col-md-3" onchange="style_Change(value)" style="font-size:12px;">
+              <option {{#is style_id 1 }} selected="selected" {{/is}} value=1>Timeless 5 Pocket</option>
+              <option  {{#is style_id 2 }} selected="selected"  {{/is}} value=2>Classic Chino</option>
+            </select>
+
+  </div>
+  
+
+
+
+  
+
+  <div class="text-left form-group row" >
+  
+      <label for="sel-options" class="col-md-7"  style="font-size:12px; color:grey;" >
+  CHOOSE YOUR FABRIC</label>
+  
+
+
+        <select id="change_fabric" onchange="call_fabric(value)"  class="form-control col-md-3" style="font-size:12px;">
+                <option {{#is fabric_id 1}} selected {{/is}} value=1 >Sueded Stretch Twill</option>
+                <option {{#is fabric_id 2}} selected {{/is}} value=2>Sueded Stretch Sateen </option> 
+        </select>
+     
+    </div>
+
+
+
+<style type="text/css">
+.round-block {
+    display: inline-grid;
+    line-height: 1px !important;
+}
+  .round-block .helpText {
+    position: relative;
+    top: 22px;
+    display: none;
+    font-size: 10px;
+}
+.modal-body .round-block {
+line-height: 1px !important;
+  }
+  .modal-body .round-block .helpText {
+top: 64px !important;
+  }
+  
+</style>
+
+  <div   class="text-left">
+    <label for="sel-options"  style="font-size:12px; color:grey;" >
+  CHOOSE YOUR COLOUR</label>
+      <form action="#">
+    <div class="lh"  id="set_color" accesskey="" aria-placeholder="" >
+      {{!-- onclick="slide_color(1,7,8,9,10,11,12)" --}}
+      {{!-- params 
+      1 => id
+      7,8,9.... remaining are all photos --}}
+     
+    <div class="round-block">
+        <input class="a"  onclick="slide_color('Ballard',1,2,3,4,5,6,7,8,1,id,'test111')"  type="radio" id="test1" name="radio-group" checked="checked" >
+        <label  for="test1"></label>
+       <span class="helpText" >Ballard</span>
+      </div>
+
+ <div class="round-block">
+         <input  class="b" onclick="slide_color('BlueMountain',1,2,3,4,5,6,7,8,2,id,'test222')" type="radio" id="test2" name="radio-group">
+        <label for="test2"></label>
+      <span class="helpText" >Blue Mountain</span>
+      </div>
+
+ <div class="round-block">
+         <input class="c"   type="radio" id="test3" onclick="slide_color('Brook',1,2,3,4,5,6,7,8,3,id,'test333')" name="radio-group" >
+        <label for="test3"></label>
+       <span class="helpText" >Brook</span>
+      </div>
+
+  <div class="round-block">
+        <input class="d"  type="radio" id="test4" onclick="slide_color('Burgandy',1,2,3,4,5,6,7,8,4,id,'test444')" name="radio-group">
+        <label for="test4"></label>
+      <span class="helpText" >Burgandy</span>
+      </div>
+
+    <div class="round-block">
+        <input  class="e"  type="radio" id="test5"  onclick="slide_color('Chocolate',1,2,3,4,5,6,7,8,5,id,'test555')" name="radio-group">
+       <label for="test5"></label>
+        <span class="helpText" >Chocolate</span>
+      </div>
+ 
+      <div class="round-block">
+        <input class="f"   type="radio" id="test6" onclick="slide_color('CoolGrey5C',1,2,3,4,5,6,7,8,6,id,'test666')" name="radio-group">
+        <label for="test6"></label>
+      <span class="helpText" >Cool Grey 5C</span>
+      </div>
+
+
+
+    <br>
+
+
+     <div class="round-block">
+        <input class="g"  type="radio" id="test7" onclick="slide_color('DKRoast',1,2,3,4,5,6,7,8,7,id,'test777')" name="radio-group" >
+        <label for="test7"></label>
+     <span class="helpText" >DK Roast</span>
+      </div>
+
+     <div class="round-block">
+        <input class="h"  type="radio" onclick="slide_color('DKShadow',1,2,3,4,5,6,7,8,8,id,'test888')" id="test8" name="radio-group">
+        <label for="test8"></label>
+    <span class="helpText" >DK Shadow</span>
+      </div>
+
+      <div class="round-block">
+        <input class="i"  type="radio" onclick="slide_color('DuskCloud',1,2,3,4,5,6,7,8,9,id,'test999')" id="test9" name="radio-group" >
+        <label for="test9"></label>
+     <span class="helpText" >Dusk Cloud</span>
+      </div>
+
+     <div class="round-block">
+        <input class="j"  type="radio" onclick="slide_color('FatiqueGreen',1,2,3,4,5,6,7,8,10,id,'test100')" id="test10" name="radio-group">
+        <label for="test10"></label>
+      <span class="helpText" >Fatique Green</span>
+      </div>
+
+     <div class="round-block">
+        <input class="k"  type="radio" onclick="slide_color('GoldMine',1,2,3,4,5,6,7,8,11,id,'test011')" id="test11" name="radio-group">
+        <label for="test11"></label>
+      <span class="helpText" >Gold Mine</span>
+      </div>
+
+   <div class="round-block">
+        <input class="l"  type="radio" onclick="slide_color('Jungle',1,2,3,4,5,6,7,8,12,id,'test012')" id="test12" name="radio-group">
+        <label for="test12"></label>
+     <span class="helpText" >Jungle</span>
+      </div>
+
+
+    <br>
+
+ <div class="round-block">
+        <input class="m"  type="radio" onclick="slide_color('Lawn',1,2,3,4,5,6,7,8,13,id,'test013')" id="test13" name="radio-group" >
+        <label for="test13"></label>
+      <span class="helpText" >Lawn</span>
+      </div>
+
+ <div class="round-block">
+        <input class="n"  type="radio" onclick="slide_color('NewNavy',1,2,3,4,5,6,7,8,14,id,'tets014')" id="test14" name="radio-group">
+        <label for="test14"></label>
+      <span class="helpText" >New Navy</span>
+      </div>
+
+  <div class="round-block">
+        <input class="o"  type="radio" onclick="slide_color('Oak',1,2,3,4,5,6,7,8,15,id,'test015')" id="test15" name="radio-group" >
+        <label for="test15"></label>
+   <span class="helpText" >Oak</span>
+      </div>
+
+  <div class="round-block">
+        <input class="p"  type="radio" onclick="slide_color('Olive',1,2,3,4,5,6,7,8,16,id,'test016')" id="test16" name="radio-group">
+        <label for="test16"></label>
+      <span class="helpText" >Olive</span>
+      </div>
+
+       <div class="round-block">
+        <input class="q"  type="radio" onclick="slide_color('OliveKhaki',1,2,3,4,5,6,7,8,17,id,'test017')" id="test17" name="radio-group">
+        <label for="test17"></label>
+      <span class="helpText" >Olive Khaki</span>
+      </div>
+
+      <div class="round-block">
+        <input  class="r"  type="radio" onclick="slide_color('ShrubGreen',1,2,3,4,5,6,7,8,18,id,'test018')" id="test18" name="radio-group">
+        <label for="test18"></label>
+      <span class="helpText" >Shrub Green</span>
+      </div>
+
+    <br>
+     <div class="round-block">
+        <input class="s"  type="radio" id="test19" onclick="slide_color('SteelGrey',1,2,3,4,5,6,7,8,19,id,'test019')" name="radio-group" >
+        <label for="test19"></label>
+       <span class="helpText" >Steel Grey</span>
+      </div>
+
+      <div class="round-block">
+        <input class="t"  type="radio" id="test20" onclick="slide_color('TurtleShell',1,2,3,4,5,6,7,8,20,id,'test020')" name="radio-group">
+        <label for="test20"></label>
+    <span class="helpText" >Turtle Shell</span>
+      </div>
+
+   <div class="round-block">
+        <input class="u"  type="radio" id="test21" onclick="slide_color('Walnut',1,2,3,4,5,6,7,8,21,id,'test021')" name="radio-group" >
+        <label for="test21"></label>
+     <span class="helpText" >Walnut</span>
+      </div>
+
+
+    </div>
+
+    <div  class=" col-md-12 text-right" style="margin-top: 7px;  "  >
+    <a  style="font-size: 12px; margin-right: 25%; "  align="right" type="button"  data-toggle="modal" data-target="#exampleModalCenter">
+      MORE COLORS
+    </a>
+    </div>
+
+      </form>
+      
+  </div>
+
+
+
+
+  <div  class="text-left">
+  <a href="javascript:history.back()
+" style="font-size:14px; color:grey !important;" >
+  Watch video to select size</a>
+
+<br>    <br>
+
+  <div  class="form-group row">
+      <label style="font-size:12px; color:grey;" class="col-md-9">
+  CHOOSE YOUR INSEAM LENGTH</label>
+  
+          <select id="inseam_size_change" onchange="inseam_size_change(value)" class="form-control col-md-3" style="font-size:12px;">
+          <option value=28>28</option>
+            <option value=30>30</option>
+            <option value=32 >32</option>
+            <option value=34 >34</option>
+          
+          </select>
+  
+    </div>
+
+
+
+
+  
+  <div  class="form-group row">
+      <label style="font-size:12px; color:grey;" class="col-md-9">
+  CHOOSE YOUR WAIST SIZE</label>
+  
+        <select  id="waist_size_change" class="form-control col-md-3" onchange="waist_size_change(value)" style="font-size:12px;">
+          <option value=28>28</option>
+          <option value=30>30</option>
+          <option value=32 >32</option>
+          <option value=34 >34</option>
+        
+        </select>
+    
+    </div>
+
+  </div>
+
+
+  <div  style="margin-top: 20px;" class="text-left">
+  <div class="modal fade" id="size" tabindex="-1" role="dialog" aria-labelledby="size" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+     <!-- <div class="modal-header justify-content-center">
+        <p align="center" style="font-size:16px;  color:grey;" ><b>CHOOSE YOUR COLOR </b></p>
+        
+      </div>-->
+      <div class="modal-body justified-content-right text-right">
+              
+   <div   class="justified-content-right text-right" style="margin-top:10px; ">
+    
+
+
+   <button type="button"  class="btn btn-default" data-dismiss="modal">Close</button>
+
+       <img src="img/size.jpg" class="img-fluid" alt="Responsive image">
+
+
+    
+    
+</div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<a href="#" data-toggle="modal" data-target="#size" style="font-size:14px; color:grey !important;  text-decoration: underline!important;" >
+Size Chart</a>
+
+  <br><br>
+
+  <label style="font-size:14px; color:grey;" >
+  Check Delivery</label>
+  <br>
+  <label style="font-size:14px; color:grey;" >
+  Rs.2999.00</label>
+  </div>
+
+
+
+
+  <div  style="margin-top: 20px; " class="text-left">
+  <a href="#" style="font-size:14px; color:grey !important;  text-decoration: underline!important;" >
+  Product Descriptions</a>
+  </div>
+  <br>
+  <br>
+  <div  style="margin-top: 20px; " class="text-left">
+  <a href="#" style="font-size:14px; color:grey !important; text-decoration: underline!important;" >
+  Reviews</a>
+
+ 
+
+
+  </div>
+
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+          <!-- <div class="modal-header justify-content-center">
+              <p align="center" style="font-size:16px;  color:grey;" ><b>CHOOSE YOUR COLOR </b></p>
+              
+          </div>-->
+          <div class="modal-body">
+                  
+      <div   class="" style="margin-top:10px; ">
+          <p align="center" style="font-size:16px  color:grey;" ><b>CHOOSE YOUR COLOR </b></p>
+  <form action="#" class="ab text-left" id="ab1" align="left" style="margin-left: 12%;"> 
+
+  <div  class="ab rh" >
+       <div class="round-block">
+        <input class="a"  onclick="slide_color('Ballard',1,2,3,4,5,6,7,8,1,'test1','test111')"   type="radio" id="test111" name="radio-group" checked="checked" >
+        <label  for="test111"></label>
+     <span class="helpText" >Ballard</span>
+      </div>
+  <div class="round-block">
+        <input  class="b" onclick="slide_color('BlueMountain',1,2,3,4,5,6,7,8,2,'test2',id)" type="radio" id="test222" name="radio-group">
+        <label for="test222"></label>
+      <span class="helpText" >Blue Mountain</span>
+      </div>
+  <div class="round-block">
+        <input class="c"   type="radio" id="test333" onclick="slide_color('Brook',1,2,3,4,5,6,7,8,3,'test3',id)" name="radio-group" >
+        <label for="test333"></label>
+     <span class="helpText" >Brook</span>
+      </div>
+  <div class="round-block">
+        <input class="d"  type="radio" id="test444" onclick="slide_color('Burgandy',1,2,3,4,5,6,7,8,4,'test4',id)" name="radio-group">
+        <label for="test444"></label>
+     <span class="helpText" >Burgandy</span>
+      </div>
+  <div class="round-block">
+        <input  class="e"  type="radio" id="test555"  onclick="slide_color('Chocolate',1,2,3,4,5,6,7,8,5,'test5',id)" name="radio-group">
+        <label for="test555"></label>
+      <span class="helpText" >Chocolate</span>
+      </div>
+  <div class="round-block">
+        <input class="f"   type="radio" id="test666" onclick="slide_color('CoolGrey5C',1,2,3,4,5,6,7,8,6,'test6',id)" name="radio-group">
+        <label for="test666"></label>
+       <span class="helpText" >Cool Grey 5C</span>
+      </div>
+
+
+
+    <br>
+
+
+       <div class="round-block">
+        <input class="g"  type="radio" id="test777" onclick="slide_color('DKRoast',1,2,3,4,5,6,7,8,7,'test7',id)" name="radio-group" >
+        <label for="test777"></label>
+      <span class="helpText" >DK Roast</span>
+      </div>
+  <div class="round-block">
+        <input class="h"  type="radio" onclick="slide_color('DKShadow',1,2,3,4,5,6,7,8,8,'test8',id)" id="test888" name="radio-group">
+        <label for="test888"></label>
+    <span class="helpText" >DK Shadow</span>
+      </div>
+  <div class="round-block">
+        <input class="i"  type="radio" onclick="slide_color('DuskCloud',1,2,3,4,5,6,7,8,9,'test9',id)" id="test999" name="radio-group" >
+        <label for="test999"></label>
+     <span class="helpText" >Dusk Cloud</span>
+      </div>
+  <div class="round-block">
+        <input class="j"  type="radio" onclick="slide_color('FatiqueGreen',1,2,3,4,5,6,7,8,10,'test10',id)" id="test100" name="radio-group">
+        <label for="test100"></label>
+     <span class="helpText" >Fatique Green</span>
+      </div>
+  <div class="round-block">
+        <input class="k"  type="radio" onclick="slide_color('GoldMine',1,2,3,4,5,6,7,8,11,'test11',id)" id="test011" name="radio-group">
+        <label for="test011"></label>
+      <span class="helpText" >Gold Mine</span>
+      </div>
+  <div class="round-block">
+        <input class="l"  type="radio" onclick="slide_color('Jungle',1,2,3,4,5,6,7,8,12,'test12',id)" id="test012" name="radio-group">
+        <label for="test012"></label>
+   <span class="helpText" >Jungle</span>
+      </div>
+
+
+    <br>
+
+       <div class="round-block">
+        <input class="m"  type="radio" onclick="slide_color('Lawn',1,2,3,4,5,6,7,8,13,'test13',id)" id="test013" name="radio-group" >
+        <label for="test013"></label>
+      <span class="helpText" >Lawn</span>
+      </div>
+  <div class="round-block">
+        <input class="n"  type="radio" onclick="slide_color('NewNavy',1,2,3,4,5,6,7,8,14,'test14',id)" id="test014" name="radio-group">
+        <label for="test014"></label>
+ <span class="helpText" >New Navy</span>
+      </div>
+  <div class="round-block">
+        <input class="o"  type="radio" onclick="slide_color('Oak',1,2,3,4,5,6,7,8,15,'test15',id)" id="test015" name="radio-group" >
+        <label for="test015"></label>
+  <span class="helpText" >Oak</span>
+      </div>
+  <div class="round-block">
+        <input class="p"  type="radio" onclick="slide_color('Olive',1,2,3,4,5,6,7,8,16,'test16',id)" id="test016" name="radio-group">
+        <label for="test016"></label>
+       <span class="helpText" >Olive</span>
+      </div>
+  <div class="round-block">
+        <input class="q"  type="radio" onclick="slide_color('OliveKhaki',1,2,3,4,5,6,7,8,17,'test17',id)" id="test017" name="radio-group">
+        <label for="test017"></label>
+      <span class="helpText" >Olive Khaki</span>
+      </div>
+  <div class="round-block">
+        <input  class="r"  type="radio" onclick="slide_color('ShrubGreen',1,2,3,4,5,6,7,8,18,'test18',id)" id="test018" name="radio-group">
+        <label for="test018"></label>
+ <span class="helpText" >Shrub Green</span>
+      </div>
+    <br>
+        <div class="round-block">
+        <input class="s"  type="radio" id="test019" onclick="slide_color('SteelGrey',1,2,3,4,5,6,7,8,19,'test19',id)" name="radio-group" >
+        <label for="test019"></label>
+      <span class="helpText" >Steel Grey</span>
+      </div>
+  <div class="round-block">
+        <input class="t"  type="radio" id="test020" onclick="slide_color('TurtleShell',1,2,3,4,5,6,7,8,20,'test20',id)" name="radio-group">
+        <label for="test020"></label>
+       <span class="helpText" >Turtle Shell</span>
+      </div>
+  <div class="round-block">
+        <input class="u"  type="radio" id="test021" onclick="slide_color('Walnut',1,2,3,4,5,6,7,8,21,'test21',id)" name="radio-group" >
+        <label for="test021"></label>
+     <span class="helpText" >Walnut</span>
+      </div>
+
+
+
+    </div>
+
+  <div  class=" col-md-12 text-right" style="margin-top: 30px;  "  >
+  <a  style="font-size: 16px; margin-right: 20%; "  align="right" type="button"  data-toggle="modal" data-target="#exampleModalCenter">
+    EXIT PALETTE
+  </a>
+  </div>
+
+  </form>
+      
+          
+      </div>
+          </div>
+          
+          </div>
+      </div>
+      </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="col-md-2" id="show_cart">
+
+  </div> 
+
+
+ 
+  </div>
+
+
+<!-- <div class="col-md-6">
+<a href="video.php" STYLE="background-color:white; " class="btn btn-secondary">BUY NOW</a>
+<a href="video.php" STYLE="background-color:white;" class="btn btn-secondary">CONTINUE SHOPPING</a>
+</div> -->
+
+
+{{!-- </form> --}}
+ </section>
+
+</body>
+
+
+  <script>
+    /*$(window).scroll(function(e){
+      var aTop = $('#show_cart').height();
+      var aCart = $('#add_to_cart').height()
+      if($(this).scrollTop()  >=aTop +40){
+        //$(".position-fixed").css('position','fixed !important')
+        document.getElementById("img_style_push").setAttribute('style','position:absolute !important')
+     }else if($(this).scrollTop()  >=aCart){
+
+     document.getElementById("img_style_push").setAttribute('style','position:fixed !important')
+      }
+      else{
+
+     document.getElementById("img_style_push").setAttribute('style','position:absolute !important')
+      }
+
+    })*/
+
+
+
+    function inseam_size_change(val){
+      document.getElementById("inseam_size_change").setAttribute('value',id1);
+    }
+    function add_to_cart(){
+      
+      
+      let fab_id = document.getElementById("change_fabric").getAttribute("value");
+      let sty_id = document.getElementById("change_style").getAttribute("value");
+      fab_id = parseInt(fab_id);
+      sty_id = parseInt(sty_id);
+
+     let style_name = parseInt(sty_id) === 1 ? 'Timeless 5 Pocket' :'Classic Chino';
+     let fabric_name = parseInt(fab_id) === 1 ? 'Sueded Strech Twill' :'Sueded Strech Sateen';
+     let sub_fold_name = document.getElementById("set_color").getAttribute("aria-placeholder");
+      let folder =""; let sub_fold =""; let img =[];
+
+      let waist_size =document.getElementById("waist_size_change").getAttribute('value');
+
+      let inseam_size =document.getElementById("inseam_size_change").getAttribute('value');
+
+
+      if(fab_id ===1 && sty_id ===1 ){
+        folder="5PocketTwill";
+        sub_fold =sub_fold_name;
+        label = 'Sueded Stretch Twill in a Timeless 5 Pocket'
+        img.push(1,2,3,4,5,6,7,8)
+      }
+      if(fab_id ===1 && sty_id ===2 ){
+        folder='SlashPocketTwill';
+        label = 'Sueded Stretch Twill in a Classic Rhino'
+        sub_fold =sub_fold_name;
+        img.push(1,2,3,4,5,6,7,8)
+      }if(fab_id ===2 && sty_id ===1 ){
+        folder="5PocketSateen";
+        label = 'Sueded Stretch Sateen in a Timeless 5 Pocket'
+        sub_fold =sub_fold_name;
+        img.push(1,2,3,4,5,6,7,8)
+      }if(fab_id ===2 && sty_id ===2){
+        folder='SlashPocketSateen';
+        label = 'Sueded Stretch Sateen in a Classic Rhino '
+        sub_fold =sub_fold_name;
+        img.push(1,2,3,4,5,6,7,8)
+      }
+
+     
+     
+      document.getElementById("show_cart").innerHTML = `
+      <div class="row" style="border:1px solid #5A6268; " > 
+        <div class="col-md-2">
+        1)
+      </div>
+          <div class= "col-md-2"> 
+              <img src="img/${folder}/${sub_fold}/${img[0]}.png" width="50px">
+         </div>
+        <div style="font-size: 10px;" class="col-md-8">
+          <ul style="text-align:left !important">
+          <li><b>Style:</b>${style_name}</li>
+          <li><b>Fabric:</b> ${fabric_name}</li>
+          <li><b>Colour:</b> ${sub_fold_name}</li>
+          <li><b>Size:</b> ${waist_size}/${inseam_size}</li>
+        </ul> 
+        </div>
+        <hr>
+        <div class="justify-content-center col-md-12" style="margin-bottom:10px;">
+          <button class="btn btn-secondary" onClick = check_submit() style="color:#000 !important; background-color:white; border:none !important">CHECK OUT </button>
+        </div>    
+      </div>
+       
+      `
+      document.getElementById("add_to_cart").innerHTML = `
+       <button class="btn btn-secondary" onClick = check_submit() style="color:#000 !important; background-color:white; text-decoration:underline !important;">BUY NOW </button>
+
+          <a href="/shop" style="background-color:white;" class="btn btn-secondary">CONTINUE SHOPPING</a>
+    
+      `
+    }
+    function waist_size_change(val){
+      document.getElementById("waist_size_change").setAttribute('value',id1);
+    }
+      function call_fabric(id){
+        
+      if(id === "2"){
+        document.getElementById("change_fabric").setAttribute('value',id);
+      }
+      if( id === "1"){
+        document.getElementById("change_fabric").setAttribute('value',id);
+      }
+      let fab = {{fabric_id}};
+      let style = {{style_id}}
+      let fab_id = document.getElementById("change_fabric").getAttribute("value");
+      let sty_id = document.getElementById("change_style").getAttribute("value");
+      fab_id = fab_id ? parseInt(fab_id) : parseInt(fab);
+      sty_id = sty_id ? parseInt(sty_id) : parseInt(style);
+     
+      document.getElementById("change_fabric").setAttribute('value',fab_id);
+      document.getElementById("change_style").setAttribute("value",sty_id);
+      style_Change(sty_id,fab_id);
+
+    }
+    function check_submit(){
+      
+       let fab_id = document.getElementById("change_fabric").getAttribute("value");
+      let sty_id = document.getElementById("change_style").getAttribute("value");
+      fab_id = parseInt(fab_id);
+      sty_id = parseInt(sty_id);
+
+     let style_name = parseInt(sty_id) === 1 ? 'Timeless 5 Pocket' :'Classic Chino';
+     let fabric_name = parseInt(fab_id) === 1 ? 'Sueded Strech Twill' :'Sueded Strech Sateen';
+     let sub_fold_name = document.getElementById("set_color").getAttribute("aria-placeholder");
+      let folder =""; let sub_fold =""; let img =[];
+
+      let waist_size =document.getElementById("waist_size_change").getAttribute('value');
+
+      let inseam_size =document.getElementById("inseam_size_change").getAttribute('value');
+
+
+      if(fab_id ===1 && sty_id ===1 ){
+        folder="5PocketTwill";
+        sub_fold =sub_fold_name;
+        label = 'Sueded Stretch Twill in a Timeless 5 Pocket'
+        img.push(1,2,3,4,5,6,7,8)
+      }
+      if(fab_id ===1 && sty_id ===2 ){
+        folder='SlashPocketTwill';
+        label = 'Sueded Stretch Twill in a Classic Rhino'
+        sub_fold =sub_fold_name;
+        img.push(1,2,3,4,5,6,7,8)
+      }if(fab_id ===2 && sty_id ===1 ){
+        folder="5PocketSateen";
+        label = 'Sueded Stretch Sateen in a Timeless 5 Pocket'
+        sub_fold =sub_fold_name;
+        img.push(1,2,3,4,5,6,7,8)
+      }if(fab_id ===2 && sty_id ===2){
+        folder='SlashPocketSateen';
+        label = 'Sueded Stretch Sateen in a Classic Rhino '
+        sub_fold =sub_fold_name;
+        img.push(1,2,3,4,5,6,7,8)
+      }
+      $.post('/checkout',{
+        style_name  : style_name,
+        fabric_name: fabric_name,
+        color: sub_fold_name,
+        waist_size: waist_size,
+        inseam_size:inseam_size,
+        folder:folder,
+        sub_fold:sub_fold,
+        img:img[0]
+      },function(data,status){
+        if(data &&data.data ===1){
+           window.location.href = "http://localhost:8080/checkout";
+        }else{
+           window.location.href = "http://18.197.83.32:8080/checkout";
+        }
+      })
+      
+
+    }
+   
+    function callVideo(){
+      let fab = {{fabric_id}};
+      let style = {{style_id}};
+      let fab_id = document.getElementById("change_fabric").getAttribute("value");
+      let sty_id = document.getElementById("change_style").getAttribute("value");
+      let color_id =document.getElementById("set_color").getAttribute("accesskey");
+      fab_id = fab_id ? parseInt(fab_id) : fab ;
+      sty_id = sty_id ? parseInt(sty_id) : style
+      if(fab_id && sty_id){
+        let href =`/video?style_id=${sty_id}&&fabric_id=${fab_id}&&color_id=${color_id}`
+        document.getElementById("callVideo").setAttribute("href",href)
+      }
+
+    }
+    function onLoad(id1,id2,id3,id4){
+         $("#{{add_color_id}}").prop("checked","checked");
+        $("#{{add_more_id}}").prop("checked","checked");
+ $("#{{add_color_id}}").parent().find('.helpText').css('display','block');
+      $("#{{add_more_id}}").parent().find('.helpText').css('display','block');
+        style_Change(id1,id2,1)
+    }
+    
+     function style_Change(id1,id2,id3){
+      document.getElementById("change_style").setAttribute('value',id1);
+      if(id2){
+        document.getElementById("change_fabric").setAttribute('value',id2);
+      }
+      document.getElementById("set_color").setAttribute("accesskey",1);
+      document.getElementById("set_color").setAttribute("aria-placeholder",'Ballard');
+      if(!id3){
+           $("#test1").prop("checked","checked");
+      $("#test111").prop("checked","checked");
+
+
+      $('input[type=radio]').prop('checked', function () {
+        return this.getAttribute('checked') == 'checked';
+      });
+
+      }
+     
+   
+
+
+      let fab = {{fabric_id}};
+      let style = {{style_id}}
+      let color_id = "{{color_id}}"|| "Ballard";
+      if(!id3){
+        color_id = "Ballard"
+      }
+      let fab_id = document.getElementById("change_fabric").getAttribute("value");
+      let sty_id = document.getElementById("change_style").getAttribute("value");
+      fab_id = fab_id ? parseInt(fab_id) : parseInt(fab);
+      sty_id = sty_id ? parseInt(sty_id) : parseInt(style);
+      let folder =""; let sub_fold =""; let img =[];
+      document.getElementById("change_fabric").setAttribute('value',fab_id);
+      document.getElementById("change_style").setAttribute("value",sty_id);
+      
+      let waist_size =document.getElementById("waist_size_change").getAttribute('value');
+
+      let inseam_size =document.getElementById("inseam_size_change").getAttribute('value');
+
+      if(!waist_size){
+          document.getElementById("waist_size_change").setAttribute('value',28);
+      }
+       if(!inseam_size){
+          document.getElementById("inseam_size_change").setAttribute('value',28);
+      }
+
+       if(fab_id ===1 && sty_id ===1 ){
+        folder="5PocketTwill";
+        sub_fold = color_id;
+        label = 'Sueded Stretch Twill in a Timeless 5 Pocket'
+        img.push(1,2,3,4,5,6,7,8)
+      }
+      if(fab_id ===1 && sty_id ===2 ){
+        folder='SlashPocketTwill';
+        label = 'Sueded Stretch Twill in a Classic Rhino'
+        sub_fold = color_id;
+        img.push(1,2,3,4,5,6,7,8)
+      }if(fab_id ===2 && sty_id ===1 ){
+        folder="5PocketSateen";
+        label = 'Sueded Stretch Sateen in a Timeless 5 Pocket'
+        sub_fold = color_id;
+        img.push(1,2,3,4,5,6,7,8)
+      }if(fab_id ===2 && sty_id ===2){
+        folder='SlashPocketSateen';
+        label = 'Sueded Stretch Sateen in a Classic Rhino '
+        sub_fold = color_id;
+        img.push(1,2,3,4,5,6,7,8)
+      }
+        sub_fold = color_id.replace(/ +/g, "");
+
+
+         document.getElementById("img_style_push").innerHTML = 
+          `
+         <!-- <div class="form-check" style="font-size:12px; color:grey;"> 
+          <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios2">
+            ${label}
+          </label>
+           </div>  -->
+
+      <div  class="regular" id="slide_1 regular"  style="margin-top:15px;width:400px !important;">
+          <div id="page1">
+            <img src="img/${folder}/${sub_fold}/${img[0]}.png">
+          </div>
+          <div id="page2">
+            <img src="img/${folder}/${sub_fold}/${img[1]}.png">
+          </div>
+          <div id="page3">
+            <img src="img/${folder}/${sub_fold}/${img[2]}.png">
+          </div>
+          <div id="page4">
+            <img src="img/${folder}/${sub_fold}/${img[3]}.png">
+          </div>
+          <div id="page5">
+            <img src="img/${folder}/${sub_fold}/${img[4]}.png">
+          </div>
+          <div id="page6">
+            <img src="img/${folder}/${sub_fold}/${img[5]}.png">
+          </div>
+           <div id="page6">
+            <img src="img/${folder}/${sub_fold}/${img[6]}.png">
+          </div> 
+          <div id="page6">
+            <img src="img/${folder}/${sub_fold}/${img[7]}.png">
+          </div>
+
+        </div>
+        
+        `
+        
+        $(".regular").slick({
+          dots: true,
+          infinite: true,
+        
+        });
+
+   
+    }
+     function callPrev(){
+      let fab = {{fabric_id}};
+      let style = {{style_id}}
+      let fab_id = document.getElementById("change_fabric").getAttribute("value");
+      let sty_id = document.getElementById("change_style").getAttribute("value");
+      fab_id = fab_id ? parseInt(fab_id) : fab ;
+      sty_id = sty_id ? parseInt(sty_id) : style
+      if( sty_id){
+        let href =`/selected_product?style_id=${sty_id}&&fabric_id=${fab_id}`
+        document.getElementById("callPrev").setAttribute("href",href)
+      }
+    }
+    function slide_color(name,p1,p2,p3,p4,p5,p6,p7,p8,id,color_id,more_id){
+        $(`#${color_id}`).prop("checked","checked");
+
+      $(`#${more_id}`).prop("checked","checked");
+      $('.helpText').css("display","none");
+$("#"+color_id).parent().find('.helpText').css('display','block');
+      $("#"+more_id).parent().find('.helpText').css('display','block');
+      if(id){
+        document.getElementById("set_color").setAttribute("accesskey",id);
+        document.getElementById("set_color").setAttribute("aria-placeholder",name);
+
+      }
+      let fab = {{fabric_id}};
+      let style = {{style_id}}
+      let fab_id = document.getElementById("change_fabric").getAttribute("value");
+      let sty_id = document.getElementById("change_style").getAttribute("value");
+      fab_id = fab_id ? parseInt(fab_id) : parseInt(fab);
+      sty_id = sty_id ? parseInt(sty_id) : parseInt(style);
+      let folder =""; let sub_fold =""; let img =[];
+
+       if(fab_id ===1 && sty_id ===1 ){
+        folder="5PocketTwill";
+        sub_fold =name;
+        label = 'Sueded Stretch Twill in a Timeless 5 Pocket'
+        img =[1,2,3,4,5,6,7,8]
+      }
+      if(fab_id ===1 && sty_id ===2 ){
+        folder="SlashPocketTwill";
+        label = 'Sueded Stretch Twill in a Classic Rhino'
+        sub_fold =name;
+        img =[1,2,3,4,5,6,7,8]
+
+      }if(fab_id ===2 && sty_id ===1 ){
+        folder="5PocketSateen";
+        label = 'Sueded Stretch Sateen in a Timeless 5 Pocket'
+        sub_fold =name;
+        img =[1,2,3,4,5,6,7,8]
+
+      }if(fab_id ===2 && sty_id ===2){
+        folder="SlashPocketSateen";
+        label = 'Sueded Stretch Sateen in a Classic Rhino '
+        sub_fold =name;
+        img =[1,2,3,4,5,6,7,8]
+
+      }
+       sub_fold = sub_fold.replace(/ +/g, "");
+
+
+     
+      if(sty_id){
+
+         document.getElementById("img_style_push").innerHTML = 
+          `
+        <!--  <div class="form-check" style="font-size:12px; color:grey;"> 
+          <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios2">
+            ${label}
+          </label>
+           </div>  -->
+
+      <div  class="regular" id="slide_1 regular"  style="margin-top:15px;width:400px !important;">
+            <div id="page1">
+            <img src="img/${folder}/${sub_fold}/${img[0]}.png">
+          </div>
+          <div id="page2">
+            <img src="img/${folder}/${sub_fold}/${img[1]}.png">
+          </div>
+          <div id="page3">
+            <img src="img/${folder}/${sub_fold}/${img[2]}.png">
+          </div>
+          <div id="page4">
+            <img src="img/${folder}/${sub_fold}/${img[3]}.png">
+          </div>
+          <div id="page5">
+            <img src="img/${folder}/${sub_fold}/${img[4]}.png">
+          </div>
+          <div id="page6">
+            <img src="img/${folder}/${sub_fold}/${img[5]}.png">
+          </div>
+           <div id="page6">
+            <img src="img/${folder}/${sub_fold}/${img[6]}.png">
+          </div> 
+          <div id="page6">
+            <img src="img/${folder}/${sub_fold}/${img[7]}.png">
+          </div>
+
+
+        </div>
+        `
+        
+        $(".regular").slick({
+          dots: true,
+          infinite: true,
+        
+        });
+      }
+
+    }
+
+    
+</script>
+
+
+  

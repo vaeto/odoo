@@ -1,0 +1,179 @@
+<style>
+.a {
+    box-shadow: 15px 15px 10px -4px rgba(31, 73, 125, 0.8);
+   
+    margin: 50px;
+    background: white;
+}
+.border-between > [class*='col-']:before {
+   background: black;
+   bottom: 0;
+   content: " ";
+   left: 0;
+   position: absolute;
+   width: 2px;
+   top: 0;
+}
+
+.border-between > [class*='col-']:first-child:before {
+   display: none;
+}
+
+#block_container
+{
+   }
+#bloc1, #bloc2
+{
+    display:inline;
+}
+
+input[type="text"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input[type="email"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="email"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input[type="number"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="number"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input[type="password"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="password"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+</style>
+
+  <style>
+  .sel-select{width: 100%}
+  /* This is to remove the arrow of select element in IE */
+  select::-ms-expand {  display: none; }
+  select{
+      -webkit-appearance: none;
+      appearance: none;
+  }
+  @-moz-document url-prefix(){
+    .ui-select{border: 1px solid #CCC; border-radius: 4px; box-sizing: border-box; position: relative; overflow: hidden;}
+    .ui-select select { width: 110%; background-position: right 30px center !important; border: none !important;}
+  }
+
+ 
+  .shadow {
+      box-shadow: 1rem 1.5rem 1rem rgba(0,0,0,.15) !important;
+  }
+
+  .test{
+  overflow-y: hidden;
+      padding: 0 10px 10px 10px;
+      margin: 0 -10px
+  }
+  </style>
+
+
+<body>
+
+
+<section style="margin-top:30px;" class=" pt-xl-5 pl-xl-4  ">
+    <div class="container col-md-8" align="center" >
+        {{#if error}}
+                <p style="color: red;"> {{error}} </p>
+            {{/if}}
+             {{#if message}}
+                <p style="color: green;"> {{message}} </p>
+            {{/if}}
+<div class="row shadow p-3 mb-5 bg-white rounded border-between" data-wow-delay=".2s">
+
+<div class="col-md-6">
+<p float="center" align="center !important" class="text-center">Choose Payment Mode</p>
+
+<p style="margin-top: 80px;" float="center" align="center !important" class="text-center">Cash On Delivery</p>
+<form action="/placed_order" method="POST">
+  <button type="submit" class="btn btn-md btn-secondary">PLACE ORDER</button>
+  </form>
+
+</div>
+
+<div class="col-md-6">
+<p float="left" align="left !important" class="text-left">PRICE DETAILS</p>
+<hr>
+<div style="overflow: hidden;">
+<p float="left" align="left !important" style="font-size: 12px; float:left;" class="text-left">Order Total</p>
+
+<p float="right" align="right !important" style="font-size: 12px; float:right;" class="text-right">Rs.{{total}}<br>Free Shipping</p>
+</div>
+
+
+
+<p float="left" align="left !important" class="text-left">DELIVER TO</p>
+<hr>
+<div style="overflow: hidden;">
+<p float="left" align="left !important" style="font-size: 12px; float:left;" class="text-left">
+    {{#if data}}
+     {{data.name}}<br>{{data.contact_address}}<br>{{data.mobile}}<br> {{data.city}}<br>{{data.zip}}<br>
+    {{/if}}
+   </p>
+
+
+</div>
+
+</div>
+</div>
+
+
+
+ </div>
+
+
+
+
+
+ </section>
+
+</body>
+
+  

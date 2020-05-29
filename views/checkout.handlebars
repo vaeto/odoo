@@ -1,0 +1,295 @@
+<head>
+
+  <style type="text/css">
+   
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 50%;
+      
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+  </style>
+
+<style>
+.sel-select{width: 100%}
+/* This is to remove the arrow of select element in IE */
+select::-ms-expand {  display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+  .ui-select{border: 1px solid #CCC; border-radius: 4px; box-sizing: border-box; position: relative; overflow: hidden;}
+  .ui-select select { width: 110%; background-position: right 30px center !important; border: none !important;}
+}
+
+.a {
+    box-shadow: 15px 15px 10px -4px rgba(31, 73, 125, 0.8);
+   
+    margin: 50px;
+    background: white;
+}
+.shadow {
+    box-shadow: 1rem 1.5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+a{
+
+color:black !important;
+font-size: 14px;
+}
+
+
+.test{
+overflow-y: hidden;
+    padding: 0 10px 10px 10px;
+    margin: 0 -10px
+}
+</style>
+
+<style>
+
+#block_container
+{
+   }
+#bloc1, #bloc2
+{
+    display:inline;
+}
+
+input[type="text"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input[type="email"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="email"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input[type="number"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="number"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input[type="password"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="password"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+</style>
+
+</head>
+
+
+<body>
+     {{#if error}}
+        <p style="color: red;"> {{error}} </p>
+    {{/if}}
+    <section style="margin-top:30px;" class=" pt-xl-5 pl-xl-4  ">
+      <div class="container" align="center" >
+          <div class="col-md-9 shadow p-3 mb-5 bg-white rounded" data-wow-delay=".2s">
+               <p float="left" align="left !important" class="text-left">Order Summary</p>
+               <div class="table-responsive">
+                  <table class="table table-bordered" style="font-size: 14px !important;">
+                    <thead>
+                      <tr>
+                         <th scope="col">Sl No.</th>
+                          <th scope="col">Style</th>
+                          <th scope="col">Fabric</th>
+                          <th scope="col">Colour</th>
+                          <th scope="col">Waist Size</th>
+                          <th scope="col">Inseam Length</th>
+                          <th scope="col">Finish</th>
+                          <th scope="col">Qty.</th>
+                          <th scope="col">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{#each data}}
+                      <tr>
+                         <td scope="row">{{si_no}}</td>
+                          <td >
+                            <div class="row">
+                                <div class="col-md-4"> <img src={{img_url}} height="50px" width="50px"></div>
+                                <div class="col-md-8" >{{style_name}}</div>
+                            </div>
+                          </td>
+                        <td >{{fabric_name}}</td>
+                        <td >{{color}}</td>
+                        <td >{{waist_size}}</td>
+                        <td >{{inseam_size}}</td>
+                        <td >Urban</td>
+                          <td >1</td>
+                        <td >Rs.2999</td>
+                      </tr>
+                      {{/each}}
+                      <tr>
+                         <td border="0" colspan="8"  style="text-align: right; margin: 0px; border-bottom: 1px solid white;border-left: 1px solid white;">TOTAL</td>
+                        <td>Rs.{{total}}<br>
+                        <small style="font-size: 10px;">Inclusive all taxes<br>
+                        Free Shipping</small>
+                      </td>
+                      </tr>
+                    </tbody>
+                    </table>
+                </div>
+          </div>
+      </div>
+
+    {{!-- Address should addig --}}
+
+    <div class="container" >
+      
+             {{#if message}}
+                <p style="color: green;"> {{message}} </p>
+            {{/if}}
+       <form style="margin-top:20px;"class="form-signin" align="right" method="POST"  action="/add_address" >
+      <div class="row">
+          
+        <div class="col-md-3 offset-md-2 shadow p-3 mb-5 bg-white rounded" >
+             
+               <div id="bloc2">    <label class="container"> Select Shipping Address &nbsp; &nbsp; &nbsp;
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+                        </label></div>
+
+                 <br>
+                  <div class="form-group">
+                    <input type="text" class="form-control mb-4 col-md-11" id="exampleInputEmail1" aria-describedby="name" name="name" placeholder="Name *" required="true" value= {{#if address}} {{address.name}} {{/if}}>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mb-4 col-md-11" id="exampleInputEmail1" aria-describedby="name" name="address" placeholder="Address *" required="true" value= {{#if address}} {{address.contact_address}} 
+                    {{/if}} >
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mb-4 col-md-11" id="exampleInputEmail1" aria-describedby="name" name="area" placeholder="Area *" required="true" value= {{#if address}} {{address.street}} {{/if}} >
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mb-4 col-md-11" id="exampleInputEmail1" aria-describedby="name" name="city" placeholder="City *" required="true" value= {{#if address}} {{address.city}} {{/if}}>
+                </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control mb-4 col-md-11" id="exampleInputEmail1" aria-describedby="name" name="state_id" placeholder="State "  value= {{#if address}} {{address.state_id}} {{/if}}>
+                </div>
+              
+              
+                <div class="form-group sel">
+                    <select class="form-control mb-4 col-md-11" id="sel1" name="country_id" required="true" value= {{#if address}} {{address.country_id}} {{/if}}>
+                    <option>Country *</option>
+                    <option selected>India</option>
+                    <option>USA</option>
+                    <option>Austrilia</option>
+                    <option>Singapore</option>
+                    </select>
+                </div> 
+                <div class="form-group">
+                    <input type="text" class="form-control mb-4 col-md-11" id="exampleInputEmail1"  pattern="[6-9]{1}[0-9]{5}"  name="pincode" placeholder="Pincode*" title="Pincode starts with 6 and should 6 digits" required="true" value= {{#if address}} {{address.zip}} {{/if}}>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mb-4 col-md-11"  pattern="[6-9]{1}[0-9]{9}" name="mobile" placeholder="Mobile *" title="Phone number starts with 7-9 and remaing 9 digit with 0-9" required="true" value= {{#if address}} {{address.mobile}} {{/if}}>
+                </div>
+
+        </div>
+         <div class="col-md-2 offset-md-1 shadow p-3 mb-5 bg-white rounded text-center" style="height: 100px !important; line-height: 80px; margin-top: 16%;"  >
+
+           {{!-- <button class="btn btn-secondary prev-next" type="submit" style=" text-align: center; vertical-align: middle; " href="">Add New Address</button> --}}
+           <button type="submit" style=" text-align: center; vertical-align: middle; color:black;" class="btn btn-link" >Add New Address</button>
+          </div>
+
+
+          <div class="offset-md-2">
+            {{!-- <button class="btn btn-lg btn-secondary"> --}}
+                {{!-- <a type="button" href="/placed_order" style="color:white !important;"
+  class="btn btn-md btn-secondary">PROCEED WITH THE PAYMENT</a> --}}
+                  <button type="submit"  style="color:white !important;"
+  class="btn btn-md btn-secondary">PROCEED WITH THE PAYMENT</button>
+
+              {{!-- </button>  --}}
+
+              
+
+          </div>
+
+      </div>
+                    </form>
+
+    </div>
+
+    </section>
+    
+    
+{{!-- <a href="/add_address" id="callVideo"  class="btn btn-secondary prev-next"  >Add</a> --}}
+
+
+
+</body>

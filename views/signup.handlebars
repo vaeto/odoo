@@ -1,0 +1,231 @@
+
+
+<style type="text/css">
+   
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 50%;
+      
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+  </style>
+
+<style>
+.sel-select{width: 100%}
+/* This is to remove the arrow of select element in IE */
+select::-ms-expand {  display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+  .ui-select{border: 1px solid #CCC; border-radius: 4px; box-sizing: border-box; position: relative; overflow: hidden;}
+  .ui-select select { width: 110%; background-position: right 30px center !important; border: none !important;}
+}
+
+.a {
+    box-shadow: 15px 15px 10px -4px rgba(31, 73, 125, 0.8);
+   
+    margin: 50px;
+    background: white;
+}
+.shadow {
+    box-shadow: 1rem 1.5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+a{
+
+color:black !important;
+font-size: 14px;
+}
+
+input[type="text"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input[type="email"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="email"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input[type="number"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="number"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input[type="password"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="password"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.test{
+overflow-y: hidden;
+    padding: 0 10px 10px 10px;
+    margin: 0 -10px
+}
+</style>
+
+
+<body>
+
+<section style="margin-top:30px;" class=" pt-xl-5 pl-xl-4  text-center">
+        <form class="form-signin" align="right" method="POST"  action="/signup">   
+    <div class="container" align="center">
+        <div class="col-md-6 shadow p-3 mb-5 bg-white rounded" data-wow-delay=".2s">
+        {{#if error}}
+                <p style="color: red;"> {{error}} </p>
+        {{/if}}
+
+          {{#if message}}
+                <p style="color:green;"> <h4>{{message}}</h4> </p>
+        {{/if}}
+        
+<p style="margin-top:20px; font-size: 18px;" class="form-check-label" for="exampleCheck1">Sign Up</p>
+    <div class="form-group">
+
+<input type="text" class="form-control mb-4 col-md-8" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" placeholder="Name *" required="true">
+
+</div>
+<div class="form-group">
+
+<input type="email" class="form-control mb-4 col-md-8" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email address *" required="true">
+
+</div>
+
+<div class="form-group sel">
+<select class="form-control mb-4 col-md-8" id="sel1" name="country" required="true">
+<option>Country *</option>
+<option>India</option>
+<option>USA</option>
+<option>Austrilia</option>
+<option>Singapore</option>
+</select>
+</div> 
+<div class="form-group">
+
+<input type="text" class="form-control mb-4 col-md-8" name="phone"   pattern="[6-9]{1}[0-9]{9}" name="mobile" placeholder="Mobile *" title="Phone number starts with 7-9 and remaing 9 digit with 0-9" required="true" placeholder="Phone *" required="true">
+
+</div>
+<div class="form-group">
+<input type="password" class="form-control mb-4 col-md-8" name="password" id="exampleInputPassword1" placeholder="Password *" required="true">
+</div>
+<div class="form-group">
+<input type="password" class="form-control mb-4 col-md-8" name="confirm_password" id="exampleInputPassword1" placeholder="Confirm Password *" required="true">
+</div>
+<div class="form-group form-check">
+<input type="checkbox" class="form-check-input" id="exampleCheck1">
+<label class="form-check-label" for="exampleCheck1">Accept our terms and conditions</label>
+</div>
+<br>
+<button type="submit" id="submit_user" class="btn btn-lg btn-secondary">CREATE ACCOUNT</button><br>
+<p style="margin-top:10px; margin-bottom: 20px;" class="form-check-label" for="exampleCheck1">Already have a account?  <a href="/signin">Sign In</a></p>
+
+        </div>
+    </div>
+    </form>
+
+ </section>
+<!-- Footer -->
+
+
+  <!-- Bootstrap core JavaScript -->
+
+
+   <script type="text/javascript">
+    
+    function checkmobile(){
+        var phone = document.form.phone.value;
+        alert(phone)
+        if(phone ==="" || phone.length !==10)
+        {
+        document.form.phone.focus();
+        return false;
+        }
+    }
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("collapsibleNavbar");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+</body>
+
+{{!-- </html>
+   --}}

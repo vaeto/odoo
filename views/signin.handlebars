@@ -1,0 +1,168 @@
+
+<html lang="en"> 
+
+
+<style type="text/css">
+   
+
+    *{
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 50%;
+      
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+  </style>
+
+<style>
+.sel-select{width: 100%}
+/* This is to remove the arrow of select element in IE */
+select::-ms-expand {  display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+  .ui-select{border: 1px solid #CCC; border-radius: 4px; box-sizing: border-box; position: relative; overflow: hidden;}
+  .ui-select select { width: 110%; background-position: right 30px center !important; border: none !important;}
+}
+
+.a {
+    box-shadow: 15px 15px 10px -4px rgba(31, 73, 125, 0.8);
+   
+    margin: 50px;
+    background: white;
+}
+.shadow {
+    box-shadow: 1rem 1.5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+a{
+
+color:black !important;
+font-size: 14px;
+}
+
+
+.test{
+overflow-y: hidden;
+    padding: 0 10px 10px 10px;
+    margin: 0 -10px
+}
+</style>
+
+<style>
+input[type="text"],
+select.form-control {
+  background: transparent;
+  
+  border: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 6px;
+}
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+input[type="password"],
+select.form-control {
+  background: transparent;
+  
+  border: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 6px;
+}
+input[type="password"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+</style>
+
+
+<body>
+<section style="margin-top:30px;" class=" pt-xl-5 pl-xl-4  ">
+    <div class="container" align="center" >
+      <div class="col-md-4 shadow p-3 mb-5 bg-white rounded" data-wow-delay=".2s">
+          {{#if error}}
+                  <p style="color: red;"> {{error}} </p>
+          {{/if}}
+
+          <form style="margin-top:20px;" action="/signin" method="POST">
+              <div class="input-group mb-3">
+                <div class="input-group-append">
+                  <span  style="font-size: 25px;" class=""><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                  &nbsp;
+                </div>
+                <input type="text" name="email" class="form-control input_user col-md-12" value="" placeholder="Username" required="true">
+              </div>
+              <div class="input-group mb-2">
+                <div class="input-group-append">
+                  <span style="font-size: 28px;" class=""><i class="fa fa-unlock-alt" aria-hidden="true"></i></span> &nbsp;&nbsp;
+                </div>
+                <input type="password" name="password" class="form-control input_pass col-md-12" value="" placeholder="Password" required="true">
+              </div>
+              <div class="form-group" text-align="right !important">
+                <div class="custom-control custom-checkbox" align="right">
+                
+                  <a href="/signin">Forgot Password?</a>
+                    <a href="/signup">Sign Up</a>
+  <br>
+  <button style="background-color: white !important; border-color: white; color:black; text-decoration: underline;" type="submit" id="submit_user" class="btn btn-lg btn-secondary">Log In</button>
+
+                    {{!-- <a float="right !important" style="font-size: 18px !important; text-decoration: underline;" href="/s">Log In</a> --}}
+                </div>
+              </div>
+          </form>
+     </div>
+   </div>
+</section>
+
+  <!-- Bootstrap core JavaScript -->
+</body>
+<script>
+function myFunction() {
+  var x = document.getElementById("collapsibleNavbar");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+
+</html>
+  

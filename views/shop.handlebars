@@ -1,0 +1,382 @@
+<html lang="en"> 
+
+
+
+<style type="text/css">
+
+
+.slick-slide {
+    margin: 0px 0px !important;
+}
+
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    
+
+
+    .slick-slide img {
+      width: 400px;
+      height: 400px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+  </style>
+
+<style>
+.sel-select{width: 100%}
+/* This is to remove the arrow of select element in IE */
+select::-ms-expand {  display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+  .ui-select{border: 1px solid #CCC; border-radius: 4px; box-sizing: border-box; position: relative; overflow: hidden;}
+  .ui-select select { width: 110%; background-position: right 30px center !important; border: none !important;}
+}
+
+.a {
+    box-shadow: 15px 15px 10px -4px rgba(31, 73, 125, 0.8);
+   
+    margin: 50px;
+    background: white;
+}
+.shadow {
+    box-shadow: 1rem 1.5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+a{
+
+color:black !important;
+font-size: 14px;
+}
+
+
+.test{
+overflow-y: hidden;
+    padding: 0 10px 10px 10px;
+    margin: 0 -10px
+}
+</style>
+
+<style>
+.slick-prev:before, .slick-next:before { font-family: FontAwesome; font-size: 18px; line-height: 1; font-weight: 2px; color: grey; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+
+.slick-prev:before { content: "\f053"; }
+[dir="rtl"] .slick-prev:before { content: "\f054"; }
+
+[dir="rtl"] .slick-next { left: -10px; top: 70px; right: auto; }
+.slick-next:before { content: "\f054"; }
+[dir="rtl"] .slick-next:before { content: "\f053"; }
+.slick-dots {
+    top: 100%;
+    list-style-type: none;
+
+}
+.slick-dots {
+    top: 100%;
+    list-style-type: none;
+
+}
+.slick-dots li{
+    margin: 1 0.25rem;
+width:3px !important;
+   
+
+ 
+}
+
+.slick-dots li button {
+    display: inline;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 1px;
+
+   margin: 12px 0 3px 0;
+    border: none;
+    border-radius: 100%;
+    background-color: white !important;
+    border: 1px solid #696969 !important;
+
+    text-indent: -9999px;
+}
+.slick-dots li button:hover{
+    background-color: black !important;
+}
+.slick-dots li.slick-active button{
+    border: 1px solid #000000 !important;
+    background-color: #000000 !important;
+}
+</style>
+
+<style>
+
+.cell {cursor: cell;
+font-size: 20px;
+width:20px;
+
+}
+.slick-slide img {
+      width: 400px;
+      height: 400px;
+    }
+.slick-prev:before, .slick-next:before { font-family: FontAwesome; font-size: 18px; line-height: 1; font-weight: 2px; color: grey; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+
+.slick-prev:before { content: "\f053"; }
+[dir="rtl"] .slick-prev:before { content: "\f054"; }
+
+[dir="rtl"] .slick-next { left: -10px; top: 70px; right: auto; }
+.slick-next:before { content: "\f054"; }
+[dir="rtl"] .slick-next:before { content: "\f053"; }
+.slick-dots {
+    top: 100%;
+    list-style-type: none;
+
+}
+.slick-dots {
+    top: 100%;
+    list-style-type: none;
+
+}
+.slick-dots li{
+    margin: 1 0.25rem;
+width:3px !important;
+   
+
+ 
+}
+
+.slick-dots li button {
+    display: inline;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 1px;
+
+   margin: 0 0 3px 0;
+    border: none;
+    border-radius: 100%;
+    background-color: white !important;
+    border: 1px solid #696969 !important;
+
+    text-indent: -9999px;
+}
+.slick-dots li button:hover{
+    background-color: black !important;
+}
+.slick-dots li.slick-active button{
+    border: 1px solid #000000 !important;
+    background-color: #000000 !important;
+}
+</style>
+
+<body>
+
+
+
+
+<section class="  text-center">
+    <div class="container" align="center">
+<p style="font-size:18px; color:grey;">CHOOSE YOUR STYLE </p>
+
+
+<div class="row" id="mouse_out">
+
+<div  class="col-md-6" id="mouse_1_info">
+</div>
+<div  class="col-md-6" id="mouse_1">
+
+  <div class="form-check">
+    <input style="margin-top:2.5px;" checked class="form-check-input exampleRadios1" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onclick="checkType1()"/>
+    <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios1">
+      Timeless 5 Pocket
+    </label>
+  </div>
+
+
+  <div  class="regular slider" id="mouse_1_over" style="margin-top: 15px; width:400px !important; ">
+      
+      
+      <div>
+        <img src="img/page1/1.png">
+      </div>
+      <div>
+        <img src="img/page1/2.png">
+      </div>
+      <div>
+        <img src="img/page1/3.png">
+      </div>
+    <div>
+        <img src="img/page1/4.png">
+      </div>
+      <div>
+        <img src="img/page1/5.png">
+      </div>
+      <div>
+        <img src="img/page1/6.png">
+      </div>
+
+  </div>
+
+</div>
+  <div class="col-md-6" id="mouse_2_info">
+
+  </div>
+
+<div class="col-md-6" id="mouse_2">
+  <div class="form-check mouse_2_over">
+    <input style="margin-top:2.5px;"   class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" onclick="checkType2()" >
+    <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios2">
+    Classic Chino
+    </label>
+  </div>
+  <div  class="regular slider mouse_2_over" id="mouse_2_over" style="margin-top: 15px; width:400px !important" >
+    <div>
+        <img src="img/page1/7.png">
+      </div>
+      <div>
+        <img src="img/page1/8.png">
+      </div>
+      <div>
+        <img src="img/page1/9.png">
+      </div>
+    <div>
+        <img src="img/page1/10.png">
+      </div>
+      <div>
+        <img src="img/page1/11.png">
+      </div>
+      <div>
+        <img src="img/page1/12.png">
+      </div>
+
+  </div>
+
+</div>
+
+</div>
+
+
+
+  <a type="button"id="" onclick="callStyle()" href="" style="margin-top:25px;  background-image: linear-gradient(#F6F8F8, #D6D8D8); border-color: #C4C5CA !important; width:120px !important;  box-shadow: 0px 2.5px grey; color:grey !important; height:36px; border: none !important;" class="btn btn-secondary call_shop">Next</a>
+
+
+ </section>
+
+
+  <!-- Bootstrap core JavaScript -->
+  
+
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $("#mouse_2_info").hide();
+      $("#mouse_1_info").hide();
+
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+       
+      });
+      
+  $("#mouse_1_over .slick-slide").mouseenter(function(){
+    console.log("mouse1 enter");
+   var img = $(this).find("img").attr("src");
+    document.getElementById("mouse_2_info").innerHTML = `
+          <div class="zoomImg"  height="500px;">
+            <div>
+            <img src=${img} height="500px">
+            </div>
+          </div>
+    `
+    $("#mouse_2").hide();
+    $("#mouse_2_info").show();
+
+    });
+
+   $("#mouse_2_over .slick-slide").mouseenter(function(){
+      var img = $(this).find("img").attr("src");
+
+     document.getElementById("mouse_1_info").innerHTML= `
+     <div height="50%" >
+          <div class="zoomImg"  height="500px;">
+            <div>
+            <img src=${img} height="500px">
+            </div>
+    </div>
+    `
+        $("#mouse_1").hide();
+    $("#mouse_1_info").show();
+  
+  });
+  $("#mouse_1_over .slick-slide").mouseleave(function(){
+    //mouse_out_2origin()
+    $("#mouse_2").show();
+    $("#mouse_2_info").hide();
+
+  });
+  $("#mouse_2_over .slick-slide").mouseleave(function(){
+    //mouse_out_1origin()
+    $("#mouse_1").show();
+    $("#mouse_1_info").hide();
+
+  });
+      });
+
+  function callStyle(){
+    var input_doc = document.getElementsByClassName('call_shop')[0];
+    var e1 =document.getElementById("exampleRadios1").getAttribute("checked");
+    var e2 =document.getElementById("exampleRadios2").getAttribute("checked");
+    if(!e1 && !e2){
+      document.getElementById("exampleRadios1").setAttribute('checked',"true");
+    }
+    if(document.getElementById("exampleRadios1").getAttribute("checked")==="true"){
+      input_doc.setAttribute('href', '/fabric?style_id=1');
+      //input_doc.attributes.href.baseURI = '/fabric?style_id=1'
+     }else{
+      input_doc.setAttribute('href', '/fabric?style_id=2');
+      //input_doc.attributes.href.baseURI = '/fabric?style_id=2'
+    }
+  }
+  function checkType1(){
+    
+    var input_doc = document.getElementById('exampleRadios1');
+    input_doc.setAttribute('checked',"true");
+
+    var input_doc1  = document.getElementById('exampleRadios2')
+    input_doc1.setAttribute('checked','false')
+  }
+   function checkType2(){
+     
+    var input_doc1 = document.getElementById('exampleRadios2');
+    input_doc1.setAttribute('checked','true');
+        var input_doc1  = document.getElementById('exampleRadios1')
+    input_doc1.setAttribute('checked','false')
+
+  }
+  
+</script>
+
+</body>
+
+</html> 
+  

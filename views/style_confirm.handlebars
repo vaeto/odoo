@@ -1,0 +1,238 @@
+
+<head>
+<style>
+
+.cell {cursor: cell;
+font-size: 20px;
+width:20px;
+
+}
+.slick-slide img {
+      width: 400px;
+      height: 400px;
+    }
+.slick-prev:before, .slick-next:before { font-family: FontAwesome; font-size: 18px; line-height: 1; font-weight: 2px; color: grey; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+
+.slick-prev:before { content: "\f053"; }
+[dir="rtl"] .slick-prev:before { content: "\f054"; }
+
+[dir="rtl"] .slick-next { left: -10px; top: 70px; right: auto; }
+.slick-next:before { content: "\f054"; }
+[dir="rtl"] .slick-next:before { content: "\f053"; }
+.slick-dots {
+    top: 100%;
+    list-style-type: none;
+
+}
+.slick-dots {
+    top: 100%;
+    list-style-type: none;
+
+}
+.slick-dots li{
+    margin: 1 0.25rem;
+width:3px !important;
+   
+
+ 
+}
+
+.slick-dots li button {
+    display: inline;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 1px;
+
+   margin: 0 0 3px 0;
+    border: none;
+    border-radius: 100%;
+    background-color: white !important;
+    border: 1px solid #696969 !important;
+
+    text-indent: -9999px;
+}
+.slick-dots li button:hover{
+    background-color: black !important;
+}
+.slick-dots li.slick-active button{
+    border: 1px solid #000000 !important;
+    background-color: #000000 !important;
+}
+</style>
+
+</head>
+<body>
+<section class="   text-center">
+<form  action="fabric.php" method="get">
+    <div class="container" align="center">
+<p style="font-size:18px; color:grey;">CHOOSE YOUR STYLE </p>
+
+
+<div class="row">
+
+
+
+{{#is style_id 1}}
+ <div height="50%" class="col-md-6">
+
+
+    <div class="form-check">
+    <input style="margin-top:6.5px;" class="form-check-input" type="radio" name="style" id="style1" value="1" checked>
+    <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios1">
+        Timeless 5 Pocket
+    </label>
+    </div>
+
+
+
+
+    <div  class="regular slider cell" style="margin-top: 5px; width:450px !important;">
+        
+        
+        <div>
+        <img src="img/page1/1.png">
+        </div>
+        <div>
+        <img src="img/page1/2.png">
+        </div>
+        <div>
+        <img src="img/page1/3.png">
+        </div>
+    <div>
+        <img src="img/page1/4.png">
+        </div>
+        <div>
+        <img src="img/page1/5.png">
+        </div>
+        <div>
+        <img src="img/page1/6.png">
+        </div>
+
+    </div>
+
+    </div>
+    <div class="col-md-6">
+
+        <div class="zoomImg"  height="500px;">
+
+            
+            <div>
+            <img src="img/page1/1.png" height="500px">
+            </div>
+        
+
+        </div>
+
+    </div>
+{{else}}
+ <div height="50%" class="col-md-6">
+
+
+    <div class="form-check">
+    <input style="margin-top:6.5px;" class="form-check-input" type="radio" name="style" id="style1" value="1" checked>
+    <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios1">
+    Classic Chino
+    </label>
+    </div>
+
+
+
+
+    <div  class="regular slider cell" style="margin-top: 5px; width:450px !important;">
+        
+        
+        <div>
+        <img src="img/page1/7.png">
+      </div>
+      <div>
+        <img src="img/page1/8.png">
+      </div>
+      <div>
+        <img src="img/page1/9.png">
+      </div>
+    <div>
+        <img src="img/page1/10.png">
+      </div>
+      <div>
+        <img src="img/page1/11.png">
+      </div>
+      <div>
+        <img src="img/page1/12.png">
+      </div>
+
+    </div>
+
+    </div>
+    <div class="col-md-6">
+
+        <div class="zoomImg"  height="500px;">
+
+            
+            <div>
+            <img src="img/page1/7.png" height="500px">
+            </div>
+        
+
+        </div>
+
+    </div>
+{{/is}}
+   
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+{{!-- <button type="submit"  style="margin-top:25px;  background-image: linear-gradient(#F6F8F8, #D6D8D8); border-color: #C4C5CA !important; width:120px !important;  box-shadow: 0px 2.5px grey; color:grey !important; height:36px; border: none !important;" class="btn btn-secondary" class="btn btn-secondary">Next</button> --}}
+
+  <a type="button"id="" onclick="callStyle()" href="" style="margin-top:25px;  background-image: linear-gradient(#F6F8F8, #D6D8D8); border-color: #C4C5CA !important; width:120px !important;  box-shadow: 0px 2.5px grey; color:grey !important; height:36px; border: none !important;" class="btn btn-secondary call_shop">Next</a>
+
+</form>
+ </section>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $(document).on('ready', function() {
+    $(".regular").slick({
+    dots: true,
+    infinite: true,
+    
+    });
+    $(".slick-slide").each(function(){
+   
+$(this).find("img").mouseenter(function(){
+var imgSrc = $(this).attr("src");
+$(".zoomImg img").attr("src",imgSrc);
+})
+})
+    });
+
+    function callStyle(){
+        debugger;
+    var input_doc = document.getElementsByClassName('call_shop')[0];
+   
+    if({{style_id}} === 1){
+      input_doc.setAttribute('href', '/fabric?style_id=1');
+      //input_doc.attributes.href.baseURI = '/fabric?style_id=1'
+     }else{
+      input_doc.setAttribute('href', '/fabric?style_id=2');
+      //input_doc.attributes.href.baseURI = '/fabric?style_id=2'
+    }
+  }
+</script>
+  
+</body>

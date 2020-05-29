@@ -1,0 +1,453 @@
+
+{{!-- 
+<!DOCTYPE html>
+<html lang="en"> --}}
+  
+  <style type="text/css">
+    
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .slider {
+          width: 50%;
+      }
+
+      .slick-slide {
+        margin: 0px 20px;
+      }
+
+      .slick-slide img {
+        width: 100%;
+      }
+
+      .slick-prev:before,
+      .slick-next:before {
+        color: black;
+      }
+
+
+      .slick-slide {
+        transition: all ease-in-out .3s;
+        opacity: .2;
+      }
+      
+      .slick-active {
+        opacity: .5;
+      }
+
+      .slick-current {
+        opacity: 1;
+      }
+    </style>
+
+  <style>
+  .sel-select{width: 100%}
+  /* This is to remove the arrow of select element in IE */
+  select::-ms-expand {  display: none; }
+  select{
+      -webkit-appearance: none;
+      appearance: none;
+  }
+  @-moz-document url-prefix(){
+    .ui-select{border: 1px solid #CCC; border-radius: 4px; box-sizing: border-box; position: relative; overflow: hidden;}
+    .ui-select select { width: 110%; background-position: right 30px center !important; border: none !important;}
+  }
+
+  .a {
+      box-shadow: 15px 15px 10px -4px rgba(31, 73, 125, 0.8);
+    
+      margin: 50px;
+      background: white;
+  }
+  .shadow {
+      box-shadow: 1rem 1.5rem 1rem rgba(0,0,0,.15) !important;
+  }
+
+  a{
+
+  color:black !important;
+  font-size: 14px;
+  }
+
+
+  .test{
+  overflow-y: hidden;
+      padding: 0 10px 10px 10px;
+      margin: 0 -10px
+  }
+  </style>
+
+  
+<style>
+.slick-prev:before, .slick-next:before { font-family: FontAwesome; font-size: 18px; line-height: 1; font-weight: 2px; color: grey; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+
+.slick-prev:before { content: "\f053"; }
+[dir="rtl"] .slick-prev:before { content: "\f054"; }
+
+[dir="rtl"] .slick-next { left: -10px; top: 70px; right: auto; }
+.slick-next:before { content: "\f054"; }
+[dir="rtl"] .slick-next:before { content: "\f053"; }
+.slick-dots {
+    top: 100%;
+    list-style-type: none;
+
+}
+.slick-dots {
+    top: 100%;
+    list-style-type: none;
+
+}
+.slick-dots li{
+    margin: 1 0.25rem;
+width:3px !important;
+   
+
+ 
+}
+
+.slick-dots li button {
+    display: inline;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 1px;
+
+   margin: 0 0 3px 0;
+    border: none;
+    border-radius: 100%;
+    background-color: white !important;
+    border: 1px solid #696969 !important;
+
+    text-indent: -9999px;
+}
+.slick-dots li button:hover{
+    background-color: black !important;
+}
+.slick-dots li.slick-active button{
+    border: 1px solid #000000 !important;
+    background-color: #000000 !important;
+}
+</style>
+
+
+
+<body>
+
+
+
+
+<section class=" pt-xl-5 pl-xl-4  text-center">
+    <div class="container" align="center">
+<p style="font-size:18px; color:grey;">SELECTED PRODUCT </p>
+
+<div class="row justify-content-center">
+
+<div class="col-md-2 col-md-offset-6"  >
+  <label style="font-size:12px; color:grey;" >
+  Change Style</label>
+
+  <select class="form-control" id="change_style" 
+  onchange="change_style(value)">
+      <option {{#is style_id 1 }} selected="selected" {{/is}} value=1>Timeless 5 Pocket</option>
+      <option  {{#is style_id 2 }} selected="selected"  {{/is}} value=2>Classic Chino</option>
+  </select>
+
+
+</div>
+
+
+<div class="col-md-2" >
+  <label style="font-size:12px; color:grey;" >
+  Change Fabric</label>
+  <fieldset>
+
+  <p>
+      <select class="form-control" value="" id="change_fabric"onchange="call_fabric(value)" >
+      <option {{#is fabric_id 1}} selected {{/is}}  value=1 >Sueded Stretch Twill</option>
+      <option {{#is fabric_id 2}} selected {{/is}}  value=2>Sueded Stretch Sateen </option> 
+      </select>
+
+  </p>
+  </fieldset>
+
+
+</div>
+
+
+</div>
+
+
+<br>
+
+
+<div class="row">
+
+<div height="50%" class="col-md-6">
+
+<div class="form-check" id="add_fabric">
+  {{#is fabric_id 1}}
+
+      <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios1">
+      Sueded Stretch Twill
+      </label>
+      
+  <div  style="margin-top: 15px;">
+
+    <img width="50%" class="rounded-circle" alt="100x100" src="img/page2/1.png"
+            data-holder-rendered="true">
+
+  </div>
+
+  {{/is}}
+    {{#is fabric_id 2}}
+    <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios1">
+      Sueded Stretch Sateen
+   </label>
+   
+<div  style="margin-top: 15px;">
+
+  <img width="50%" class="rounded-circle" alt="100x100" src="img/page2/2.png"
+          data-holder-rendered="true">
+
+</div>
+  {{/is}}
+  </label>
+</div>
+
+
+  <div style="margin-top: 12px; line-height: 14px;">
+  <span style="font-size:12px; color:grey;" >
+  Fabric Composition  </span><br>
+  <span style="font-size:12px; color:grey;" >
+  Premium Cotton 97%|  Spandex 3% </span>
+  </div>
+
+</div>
+
+{{!-- <div class="img_style_push" id="img_style_push"> --}}
+  <div class="col-md-6" id="img_style_push" name="" >
+    {{#is style_id 1}}
+        <div class="form-check" style="font-size:12px; color:grey;"> 
+          <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios2">
+            Sueded Stretch Twill in a Timeless 5 Pocket 
+          </label>
+           </div> 
+
+        <div  class="regular slider" id="slide_1" style="margin-top:15px;width:50%;">
+
+        <div id="page1">
+          <img src="img/page1/1.png">
+        </div>
+        <div id="page2">
+          <img src="img/page1/2.png">
+        </div>
+        <div id="page3">
+          <img src="img/page1/3.png">
+        </div>
+        <div id="page4">
+          <img src="img/page1/4.png">
+        </div>
+        <div id="page5">
+          <img src="img/page1/5.png">
+        </div>
+        <div id="page6">
+          <img src="img/page1/6.png">
+        </div>
+
+        </div>
+    {{/is}}
+    {{#is style_id 2}}
+       <div class="form-check" style="font-size:12px; color:grey;"> 
+          <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios2">
+            Classic Chino
+          </label>
+           </div> 
+
+      <div  class="regular" id="slide_1 regular"  style="margin-top:15px;width:50%;">
+          <div id="page1">
+            <img src="img/page1/7.png">
+          </div>
+          <div id="page2">
+            <img src="img/page1/8.png">
+          </div>
+          <div id="page3">
+            <img src="img/page1/9.png">
+          </div>
+          <div id="page4">
+            <img src="img/page1/10.png">
+          </div>
+          <div id="page5">
+            <img src="img/page1/11.png">
+          </div>
+          <div id="page6">
+            <img src="img/page1/12.png">
+          </div>
+
+        </div>
+    {{/is}}
+        
+  </div>
+ 
+{{!-- </div> --}}
+
+
+
+</div>
+
+
+
+<a type="button" id="callPrev" onclick="callPrev()"  href=""  style="margin-top:25px;  background-image: linear-gradient(#F6F8F8, #D6D8D8); border-color: #C4C5CA !important; width:120px !important;  box-shadow: 0px 2.5px grey; color:grey !important; height:36px;" class="btn btn-secondary">Prev</a>
+
+<a type="button" id="callSelectProduct" onclick="callSelectProduct()"  href=""  style="margin-top:25px;  background-image: linear-gradient(#F6F8F8, #D6D8D8); border-color: #C4C5CA !important; width:120px !important;  box-shadow: 0px 2.5px grey; color:grey !important; height:36px;" class="btn btn-secondary">Next</a>
+
+
+ </section>
+
+  <!-- Bootstrap core JavaScript -->
+
+  <script>  
+ 
+   
+    function call_fabric(id){
+      
+      if(id === "2"){
+        document.getElementById("change_fabric").setAttribute('value',id);
+
+        document.getElementById("add_fabric").innerHTML = 
+        `
+         <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios1">
+            Sueded Stretch Sateen
+        </label>  
+      <div  style="margin-top: 15px;">
+
+        <img width="50%" class="rounded-circle" alt="100x100" src="img/page2/2.png"
+                data-holder-rendered="true">
+
+      </div>
+        `
+      }
+      if( id === "1"){
+        document.getElementById("change_fabric").setAttribute('value',id);
+
+        document.getElementById("add_fabric").innerHTML = 
+        `
+        <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios1">
+      Sueded Stretch Twill
+      </label>
+       <div  style="margin-top: 15px;">
+
+        <img width="50%" class="rounded-circle" alt="100x100" src="img/page2/1.png"
+                data-holder-rendered="true">
+
+      </div>
+        `
+      }
+    }
+    
+    function change_style(id){
+      let fab = {{fabric_id}};
+      let style = {{style_id}}
+      let fab_id = document.getElementById("change_fabric").getAttribute("value");
+      let sty_id = document.getElementById("change_style").getAttribute("value");
+      fab_id = fab_id ? parseInt(fab_id) : parseInt(fab);
+      sty_id = sty_id ? parseInt(sty_id) : parseInt(style);
+      let folder =""; let sub_fold =""; let img =[];
+      
+      if(fab_id ===1 && sty_id ===1 ){
+        folder=1;
+        sub_fold ='page1';
+        label = 'Classic Chino'
+        img =[1,2,3,4,5,6]
+      }
+      if(fab_id ===1 && sty_id ===2 ){
+        folder=1;
+        label = 'Classic Chino'
+        sub_fold ='page1';
+        img =[7,8,9,10,11,12]
+      }if(fab_id ===2 && sty_id ===1 ){
+        folder=1;
+        label = 'Classic Chino'
+        sub_fold ='page1';
+        img =[1,2,3,4,5,6]
+      }if(fab_id ===2 && sty_id ===2){
+        folder=1;
+        label = 'Classic Chino'
+        sub_fold ='page1';
+        img =[7,8,9,10,11,12]
+      }
+
+        document.getElementById("change_style").setAttribute('value',sty_id);
+        document.getElementById("change_fabric").setAttribute('value',fab_id);
+
+         document.getElementById("img_style_push").innerHTML = 
+          `
+          <div class="form-check" style="font-size:12px; color:grey;"> 
+          <label style="font-size:12px; color:grey;" class="form-check-label" for="exampleRadios2">
+            Classic Chino
+          </label>
+           </div> 
+
+      <div  class="regular" id="slide_1 regular"  style="margin-top:15px;width:50%;">
+          <div id="page1">
+            <img src="img/${sub_fold}/${img[0]}.png">
+          </div>
+          <div id="page2">
+            <img src="img/${sub_fold}/${img[1]}.png">
+          </div>
+          <div id="page3">
+            <img src="img/${sub_fold}/${img[2]}.png">
+          </div>
+          <div id="page4">
+            <img src="img/${sub_fold}/${img[3]}.png">
+          </div>
+          <div id="page5">
+            <img src="img/${sub_fold}/${img[4]}.png">
+          </div>
+          <div id="page6">
+            <img src="img/${sub_fold}/${img[5]}.png">
+          </div>
+        </div>
+        
+        `
+        
+        $(".regular").slick({
+          dots: true,
+          infinite: true,
+        
+        });
+  
+    }
+
+    function callSelectProduct(){
+    //alert(style_id)
+      let fab = {{fabric_id}};
+      let style = {{style_id}}
+      let fab_id = document.getElementById("change_fabric").getAttribute("value");
+      let sty_id = document.getElementById("change_style").getAttribute("value");
+      fab_id = fab_id ? parseInt(fab_id) : fab ;
+      sty_id = sty_id ? parseInt(sty_id) : style
+      if(fab_id && sty_id){
+        let href =`/color?style_id=${sty_id}&&fabric_id=${fab_id}`
+        document.getElementById("callSelectProduct").setAttribute("href",href)
+      }
+    }
+    function callPrev(){
+      let fab = {{fabric_id}};
+      let style = {{style_id}}
+      let fab_id = document.getElementById("change_fabric").getAttribute("value");
+      let sty_id = document.getElementById("change_style").getAttribute("value");
+      fab_id = fab_id ? parseInt(fab_id) : fab ;
+      sty_id = sty_id ? parseInt(sty_id) : style
+      if( sty_id){
+        let href =`/fabric?style_id=${sty_id}&&fabric_id=${fab_id}`
+        document.getElementById("callPrev").setAttribute("href",href)
+      }
+    }
+
+</script>
+
+ </body>
+
+{{!-- </html> --}}
+  

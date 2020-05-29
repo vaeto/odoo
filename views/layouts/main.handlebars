@@ -1,0 +1,225 @@
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Dyinem</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="slick/slick.css">
+
+
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+       <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+   <script src="https://wp.incredibbble.com/writsy-shop/wp-content/themes/writsy-shop/assets/vendor/jquery-zoom/jquery.zoom.min.js?ver=1.7.18"></script>
+
+ 
+
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+ 
+ <style>
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+
+
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 15rem;
+  min-height: 100%;
+
+}
+
+
+     a{
+
+  color:black;
+  font-size: 14px;
+  }
+ </style>
+ </head>
+
+
+ <nav class="navbar navbar-expand-lg navbar-light ">
+
+  <!-- Brand -->
+
+  {{#is home_logo 1}}
+
+  {{else}}
+   <a class="navbar-brand" href="#">
+    <img src="img/logo1.png" alt="Logo" width="150px;">
+  </a>
+  {{/is}}
+
+
+ <div class="navbar-header">
+    <button class="navbar-toggler " type="button"  onclick="myFunction()"  data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Navbar links -->
+     
+  <div class="collapse navbar-collapse" id="collapsibleNavbar" >
+
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link"  href="/home" >Home</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+  <a class="nav-link" href="/checkout">Cart</a>
+      </li>
+      
+        {{#empty  name   }}
+        <li class="nav-item">
+          <a class="nav-link" href="/signin">Sign In</a>
+        </li>
+        {{/empty}}
+        {{#if name}}        
+        <li class="nav-item">
+          <a class="nav-link"><b>Hi {{name}}</b> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signout">Signout</a>
+        </li>
+        {{/if}}
+      
+    </ul>
+ 
+  </div>
+
+
+  
+</nav> 
+    {{{body}}}
+
+{{#is home 1}}
+
+    <p align="center" class="text-muted small mb-4 mb-lg-0">copyright protected</p>
+{{else}}
+
+  <footer id="footer" class="footer page-footer">
+    <div class="container" >
+      <div class="row" >
+        <div class="col-lg-12 h-100 text-center text-lg-center my-auto" >
+          <ul class="list-inline mb-2" >
+            <li class="list-inline-item">
+              <a href="#">Contact Us</a>
+            </li>
+            <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#">FAQ</a>
+            </li>
+           <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+           <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#">Track orders</a>
+            </li>
+           <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#">Shipping</a>
+            </li>
+           <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#">Track orders</a>
+            </li>
+           <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#">International Orders</a>
+            </li>
+           <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#">Cancellations</a>
+            </li>
+           <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#"> Returns & Refunds</a>
+            </li>
+           <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#">Careers</a>
+            </li>
+           <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+           <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#">Product</a>
+            </li>
+           <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#">Returns 15 Days</a>
+            </li>
+           <li class="list-inline-item">&#124;</li>
+            <li class="list-inline-item">
+              <a href="#">Free Delivery</a>
+            </li>
+          </ul>
+          <div class="footer-copyright">
+          <p align="center" class="text-muted small mb-4 mb-lg-0">copyright protected</p>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  </footer>
+{{/is}}
+
+ 
+
+<script>
+function myFunction() {
+  var x = document.getElementById("collapsibleNavbar");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+   
+
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+      <script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
+</html>

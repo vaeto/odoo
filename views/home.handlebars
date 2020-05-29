@@ -1,0 +1,190 @@
+
+<style>
+.main-wrapper {
+  height: 100vh;  
+}
+
+.section {
+  height: 100%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 0rem !important;
+  min-height: 100%;
+
+}
+.pointer {cursor: pointer;}
+#homeVideo button.btn.btn-default {
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    z-index: 5;
+    color: white;
+}
+.sel-select{width: 100%}
+/* This is to remove the arrow of select element in IE */
+select::-ms-expand {  display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+  .ui-select{border: 1px solid #CCC; border-radius: 4px; box-sizing: border-box; position: relative; overflow: hidden;}
+  .ui-select select { width: 110%; background-position: right 30px center !important; border: none !important;}
+}
+
+.a {
+    box-shadow: 15px 15px 10px -4px rgba(31, 73, 125, 0.8);
+   
+    margin: 50px;
+    background: white;
+}
+.shadow {
+    box-shadow: 1rem 1.5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+a{
+
+color:black !important;
+font-size: 14px;
+}
+
+input[type="text"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input[type="email"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="email"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input[type="number"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="number"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input[type="password"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #5A6268;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="password"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.test{
+overflow-y: hidden;
+    padding: 0 10px 10px 10px;
+    margin: 0 -10px
+}
+</style>
+
+
+<body>
+
+<div class="main-wrapper">
+
+  <section  class="  text-center">
+      <div class="container" align="center">
+        <p style="font-size:23px; font-weight:lighter;"> Wear it to work.  Wear it to play.</p>
+        <img style="margin-top:5px;" src="img/logo1.png" class="img-fluid" alt="Responsive image">
+    </div>
+      <div>
+        <img style="margin-top:5px;" height="30%" width="100%" src="img/home1.png" class="img-fluid" alt="Responsive image">
+      </div>
+      <a type="button" href="/shop" style="margin-top:25px;  background-image: linear-gradient(#F6F8F8, #D6D8D8); border-color: #C4C5CA !important; width:120px !important;  box-shadow: 0px 2.5px grey; color:grey !important; height:36px; border: none !important;" class="btn btn-secondary">Shop Now</a>
+      
+      <a data-toggle="modal" data-target="#homeVideo"  onclick="playVid()">
+      <p class="pointer" align="center" style="font-size: 12px; margin-top: 15px;border: none !important; color:grey;">Watch Video <br> <i style="font-size:24px" class="fa">&#xf144;</i></p></a>
+
+  </section>
+
+
+</div>
+
+
+
+
+
+  <div class="modal fade" id="homeVideo" tabindex="-1" role="dialog"    aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="pauseVid()">X</button>
+        <div class="embed-responsive embed-responsive-16by9">
+          <video  id="gossVideo" class="embed-responsive-item" controls="controls" poster="http://www.gossettmktg.com/video/dangot.png">
+            <source src="http://www.gossettmktg.com/video/dangot.mp4" type="video/mp4">
+            <source src="http://www.gossettmktg.com/video/dangot.webm" type="video/webm">
+            <source src="http://www.gossettmktg.com/video/dangot.ogv" type="video/ogg">
+            <object type="application/x-shockwave-flash" data="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="353" height="190">
+              <param name="movie" value="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf"/>
+              <param name="allowFullScreen" value="true"/>   <param name="wmode" value="transparent"/>
+              <param name="flashVars" value="config={'playlist':['http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.png',{'url':'http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.mp4','autoPlay':false}]}"/>
+              <img alt="Big Buck Bunny" src="http://www.gossettmktg.com/video/dangot.png" width="353" height="190" title="No video playback capabilities, please download the video below"/>
+            </object>
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+<script>
+var vid = document.getElementById("gossVideo"); 
+
+function playVid() { 
+    vid.play(); 
+} 
+
+function pauseVid() { 
+    vid.pause(); 
+} 
+</script>
+  
+  <!-- Bootstrap core JavaScript -->
+
+{{!-- </html>  --}}

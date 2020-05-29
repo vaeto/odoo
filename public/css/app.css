@@ -1,0 +1,385 @@
+body {
+	font-family: 'Londrina Solid', cursive; background:#fff;
+}
+p {
+	font-size: 18px;
+	font-family: 'Londrina Solid', cursive;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 30px;
+	color: #000000;
+	margin: 0;
+	letter-spacing:1px;
+	margin-bottom: 5px!important;
+}
+a, a:hover {
+	transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	text-decoration: none;
+}
+a, a:focus, a:hover, button, button:focus, button:hover, checkbox, checkbox:focus, checkbox:hover, input, input:focus, input:hover, select, select:focus, select:hover {
+	outline: 0;
+}
+section {
+	clear: both;
+}
+.pad-0 {
+	padding: 0 !important;
+}
+.fa {
+	color: #323433;
+}
+/*****menu section*****/
+
+
+.presentes img.logohost
+{
+	vertical-align: middle;
+    float: left;
+width:18%;
+}
+
+img.host
+{
+	float: right;
+    width: 9%;
+}
+img.logohost
+{
+	
+    width: 10%;
+}
+.presentedsection 
+{
+	padding-left:0px;
+	padding-right:0px;
+}
+.application
+{
+	text-align:center;
+}
+img.ota
+{
+	width:100%;
+}
+img.ie
+{
+	width:100%;
+}
+
+@font-face
+{
+font-family: Dimbo;
+src: url(font/Dimbo.ttf);
+}
+label {
+    color: #fff;
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+.awardsblue input[type="text"]
+{
+	border: 2px solid #fff;
+    background-color: #04909d;
+    width: 50%;
+    border-radius: 10px;
+    float: right;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+img.man
+{
+	width:40%;
+}
+.text-line {
+    background-color: transparent;
+    color: black;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid black 1px;
+    padding: 3px 10px;
+}
+h3.underlinetext
+{
+	text-decoration:underline;
+}
+h3.hiddenn
+{
+	visibility:hidden;
+}
+h3.underlinetext span
+{
+margin-left: 50px;
+}
+.circlee p {
+border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 3px;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ----------- media starts ----------- */
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen  and (min-width: 320px)  and (max-width: 568px) {
+.m-menu {
+	margin-top: 0;
+	position: relative;
+	margin-bottom: 0;
+	height: auto;
+	padding: 0;
+}
+.m-menu .navbar-nav {
+	float: none;
+	margin: 0;
+}
+.awardsblue h2
+{
+	color:#fff;
+	text-align:center;
+	font-size: 33px;
+    font-family: Dimbo;
+    margin-bottom: 26px;
+}
+}
+  
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen  and (min-width: 375px)  and (max-width: 667px) {
+.m-menu {
+	margin-top: 0;
+	position: relative;
+	margin-bottom: 0;
+	height: auto;
+	padding: 0;
+}
+.m-menu .navbar-nav {
+	float: none;
+	margin: 0;
+}
+.awardsblue h2
+{
+	color:#fff;
+	text-align:center;
+	font-size: 33px;
+    font-family: Dimbo;
+    margin-bottom: 26px;
+}
+}
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen  and (min-width: 414px)  and (max-width: 767px) {
+.m-menu {
+	margin-top: 0;
+	position: relative;
+	margin-bottom: 0;
+	height: auto;
+	padding: 0;
+}
+.m-menu .navbar-nav {
+	float: none;
+	margin: 0;
+}
+}
+@media only screen  and (min-width: 320px)  and (max-width: 991px) {
+.m-menu .navbar {
+	border: 1px solid transparent;
+	margin-bottom: 0;
+	min-height: auto;
+	position: relative;
+	display: block;
+}
+.awardsblue input[type="text"] {
+    border: 2px solid #fff;
+    background-color: #04909d;
+    width: 100%;
+    border-radius: 10px;
+    float: right;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.logo h2 {
+	background: url(../images/logo1.png) no-repeat top center;
+	padding-left: 50px;
+	margin: 0;
+	padding: 50% 0 5% 0%;
+	font-size: 30px;
+}
+.awardsblue h2
+{
+	color:#fff;
+	text-align:center;
+	font-size: 33px;
+    font-family: Dimbo;
+    margin-bottom: 26px;
+}
+.awardsblue img {
+	width:100%;
+}
+
+.b-cont {
+	position: relative;
+	top: 0;
+	background: #00467f;
+	z-index: 9;
+	padding: 15px;
+	margin: 25px 0;
+}
+.copy ul li {
+	float: none;
+}
+.banner-bottom {
+	position: absolute;
+	bottom: 0;
+	background-image: url(../images/banner-bottom.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	z-index: 9;
+	height: 150px;
+	width: 100%;
+}
+
+.copyright-right {text-align: center;}
+.link {	text-align: center;}
+.copy p {
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+/*.videofirst iframe
+{
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}*/
+
+img.ota {
+    width: 19%;
+}
+img.ie {
+	width:19%;
+}
+img.awardhost {
+    width: 3%;
+}
+
+.hostfinal img.host {
+    width: 24%;
+    vertical-align: middle;
+    text-align: center;
+}
+.engineers {
+    margin-top: 0px;
+}
+.presented
+{
+	text-align:center;
+}
+ }
+ @media only screen  and (min-width: 768px)  and (max-width: 991px) {
+
+ .hostfinal h3 {
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+	font-family: Dimbo;
+    /* font-weight: 300; */
+    letter-spacing: 1px;
+ }
+ .foott img.host {
+    width: 40%;
+    float: right;
+    margin-right: -29px;
+}
+ }
+  @media only screen  and (min-width: 833px)  and (max-width: 900px) {
+
+.videosection h1 {
+    font-size: 25px;
+    font-family:Dimbo;
+    line-height: 1.3;
+    float: left;
+    text-align: center;
+    margin-left: -40px;
+    color: #000000;
+}
+  }
+    @media only screen  and (min-width: 320px)  and (max-width: 833px) {
+		.mobilevideo {
+    display: block;
+    text-align: center;
+    background-color: #f0af2f;
+}
+.videosection
+{
+	display:none;
+}
+.videofirst iframe {
+width: 100%;
+}
+.awardvideo iframe {
+width: 100%;
+}
+#myModal  iframe {
+width: 100%;
+}
+img.host {
+    float: right;
+    width: 20%;
+}
+img.awardhost {
+    width: 3%;
+}
+.videofirst img {
+    vertical-align: middle;
+    float: left;
+    width: 20%;
+}
+img.logohost {
+    
+    width: 20%;
+}
+	}
+	    @media only screen  and (min-width: 320px)  and (max-width: 749px) {
+
+	.hostfinal h3 {
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 0.5;
+	font-family: Dimbo;
+    /* font-weight: 300; */
+    letter-spacing: 1px;
+
+}
+		}
+@media only screen  and (min-width: 320px)  and (max-width: 767px) {
+
+.foott img.host {
+    float: none;
+    width: 21%;
+}
+}
